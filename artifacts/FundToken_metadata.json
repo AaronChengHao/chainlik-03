@@ -8,19 +8,36 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_lockTime",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_tokenName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_tokenSymbol",
+						"type": "string"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "fund",
-				"outputs": [],
-				"stateMutability": "payable",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -31,7 +48,7 @@
 						"type": "address"
 					}
 				],
-				"name": "fundersToAmount",
+				"name": "balances",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -43,36 +60,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getChainlinkDataFeedLatestAnswer",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
+						"internalType": "uint256",
+						"name": "amountToMint",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getFund",
+				"name": "mint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getFundSuccess",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -90,51 +87,57 @@
 			},
 			{
 				"inputs": [],
-				"name": "refund",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+				"name": "tokenName",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "_erc20Addr",
-						"type": "address"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
-				"name": "setErc20Addr",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenSymbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "funder",
+						"name": "payee",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amountToUpdate",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"name": "setFunderToAmount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
+				"name": "transfer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -153,7 +156,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"FundMe_flattened.sol": "FundMe"
+			"FundToken.sol": "FundToken"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -167,12 +170,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"FundMe_flattened.sol": {
-			"keccak256": "0xe1e5b4b3b5c2d03c25dd382122af770581f1ef74b4e7aa4f2171c94a43274f02",
+		"FundToken.sol": {
+			"keccak256": "0x01774f68d7c2146f28bdc993bf740565682e4de0aa93e376eb1b84a831dac46b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://26104aaa0ef58bfed2653bed2dbd1d9eafb58f3fd91bb04411253023bf9dad81",
-				"dweb:/ipfs/QmW4QgUVC8YpmCH3ajN5tKgXECrcfHqTFJwrmimQa7qVdr"
+				"bzz-raw://56c7229747816f2c5d0a92958aa18be26586e2c03e273bcb7949d0a6220c0974",
+				"dweb:/ipfs/QmP21AwDKJfZ1pJaVCDCvaZuXyXNAfNdhwA9nb4tzcJhah"
 			]
 		}
 	},
